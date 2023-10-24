@@ -12,3 +12,15 @@
     background-color: white;
     font-size: 2rem;
 }
+#title{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    z-index: 9999;
+    height: 100px;
+}
+#ar{
+    position: relative;
+    width: 50%;
+    margin: auto;
+}
