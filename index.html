@@ -1,7 +1,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/dist/mindar-image.prod.js"></script>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
@@ -13,12 +13,18 @@
       <h1>ARARARARARAR</h1>
     </div>
     <div id="ar">
-      <a-scene mindar-image="imageTargetSrc: ./targets.mind; uiScanning:no" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+      <a-scene mindar-image="imageTargetSrc: ./targetsMult.mind; uiScanning:no" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
         <a-camera position="0 0 0" look-controls="enabled: false" cursor="fuse: false; rayOrigin: mouse;" raycaster="far: ${customFields.libVersion}; objects: .clickable"></a-camera>
         <a-entity id="example-target" mindar-image-target="targetIndex: 0">
-          <a-image id="example-image" class="clickable" src="a.jpg" width="1" height="0.75"></a-image>
+          <a-image id="example-image" class="clickable" src="a.jpg" width="1.25" height="1"></a-image>
         </a-entity>
-    </a-scene>
+        <a-entity id="example-target" mindar-image-target="targetIndex: 1">
+          <a-image id="example-image" class="clickable" src="a.jpg" width="1" height="1.25"></a-image>
+        </a-entity>
+        <a-entity id="example-target" mindar-image-target="targetIndex: 2">
+          <a-image id="example-image" class="clickable" src="a.jpg" width="1" height="1"></a-image>
+        </a-entity>
+      </a-scene>
     </div>
     <button id="message-btn">message</button>
   </body>
